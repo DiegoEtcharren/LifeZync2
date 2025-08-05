@@ -1,0 +1,1 @@
+{"version":3,"sources":["paginas/_auth.scss"],"names":[],"mappings":"AAAA;EACI;EACA","file":"index.css","sourcesContent":[".auth {\r\n    max-width: 120rem;\r\n    margin: 0 auto;\r\n}"]}

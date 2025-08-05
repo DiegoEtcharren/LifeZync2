@@ -1,0 +1,102 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.header {
+    position: fixed;
+    background-color: v.$white;
+    padding: 1rem 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+
+    @include m.phone {
+        opacity: 0.8;
+    }
+
+    &--opaque {
+        opacity: 1;
+        border-bottom: 1px solid v.$midgray;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    }
+
+    &__container {
+        @include m.container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__menu-mobil {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: v.$darkGray;
+        cursor: pointer;
+        padding: 0.5rem;
+        transition: transform 0.2s;
+
+        &:hover {
+            color: v.$midgray;
+            transform: scale(1.1);
+        }
+
+        @include m.tablet {
+            display: none;
+        }
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__navigation {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        display: none;
+        margin-top: 2rem;
+        gap: 2rem;
+        font-size: 1.5rem;
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-top: 0;
+        }
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    &__link {
+        @include m.link;
+        padding: 2rem;
+    }
+
+    &__image {
+        height: 4rem; 
+        width: auto;
+        border-bottom: 1px solid v.$midgray;
+    }
+}

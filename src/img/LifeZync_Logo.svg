@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#66CCFF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <path d="M20 120 A80 80 0 1 1 140 189" fill="none" stroke="url(#blueGradient)" stroke-width="18"/>
+  <text x="200" y="176" fill="#000000" font-family="sans-serif" font-size="160">LifeZync</text>
+</svg>

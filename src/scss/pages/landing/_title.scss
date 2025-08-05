@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.landing {
+    // margin-top: 63.6953px;
+}
+
+.title {
+    position: relative;
+    width: 100%;
+    height: 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: image-set(url("../img/Wallpaper2.avif") type("image/avif"),
+            url("../img/Wallpaper2.webp") type("image/webp"),
+            url("../img/Wallpaper2.jpg") type("image/jpeg"));
+
+
+    &__container {
+        position: absolute;
+        bottom: 5rem;
+        left: 2rem;
+    }
+    
+    &__heading,
+    &__slogan{
+        margin: 0;
+        color: v.$white;
+        text-align: left;
+        margin: 1rem;
+    }
+
+    &__heading {
+        @include m.fluid-text(6rem, 10rem);
+    }
+
+    
+    &__slogan {
+        @include m.fluid-text(2rem, 4rem);
+    }
+}
