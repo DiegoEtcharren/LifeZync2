@@ -26,7 +26,8 @@ const webpack = require('webpack-stream');
 const paths = {
     scss: 'src/scss/**/*.scss',
     js: 'src/js/**/*.js',
-    imagenes: 'src/img/**/*'
+    imagenes: 'src/img/**/*',
+    fonts: 'src/fonts/**/*'
 }
 function css() {
     return src(paths.scss)
@@ -39,28 +40,37 @@ function css() {
 function javascript() {
     return src(paths.js)
         .pipe(webpack({
+            mode: 'production',
+            watch: true,
+            entry: './src/js/app.js',
+            output: {
+                filename: 'bundle.js'
+            },
             module: {
-                rules: [ 
+                rules: [
                     {
                         test: /\.css$/i,
-                        use: [
-                            'style-loader',
-                            'css-loader'
-                        ]
+                        use: ['style-loader', 'css-loader']
                     }
                 ]
             },
-            mode: 'production',
-            watch: true,
-            entry: './src/js/app.js'
-            
+            plugins: [
+                new webpack.webpack.ProvidePlugin({
+                    $: 'jquery',
+                    jQuery: 'jquery',
+                    'window.jQuery': 'jquery'
+                })
+            ],
+            resolve: {
+                extensions: ['.js']
+            }
         }))
-      .pipe(sourcemaps.init())
-    //.pipe(concat('bundle.js')) 
-      .pipe(terser())
-      .pipe(sourcemaps.write('.'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(dest('./public/build/js'))
+        .pipe(sourcemaps.init())
+        // .pipe(concat('bundle.js')) 
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(dest('./public/build/js'))
 }
 
 function imagenes() {
@@ -89,13 +99,24 @@ function versionAvif( done ) {
     done();
 }
 
+function fonts() {
+    return src(paths.fonts)
+        .pipe(dest('public/build/fonts'));
+}
+
+function fontawesome() {
+  return src('node_modules/@fortawesome/fontawesome-free/webfonts/**/*')
+    .pipe(dest('public/build/webfonts'));
+}
+
 function dev(done) {
     watch( paths.scss, css );
     watch( paths.js, javascript );
-    watch( paths.imagenes, imagenes)
-    watch( paths.imagenes, versionWebp)
-    watch( paths.imagenes, versionAvif)
-    done()
+    watch( paths.imagenes, imagenes);
+    watch( paths.imagenes, versionWebp);
+    watch( paths.imagenes, versionAvif);
+    watch(paths.fonts, fonts);
+    done();
 }
 
 exports.css = css;
@@ -103,4 +124,5 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;
+exports.fonts = fonts;
+exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, fonts, fontawesome, dev);

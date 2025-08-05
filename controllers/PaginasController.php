@@ -10,7 +10,7 @@ class PaginasController
     public static function index(Router $router)
     {
 
-        $router->render('paginas/landing', [
+        $router->render('paginas/home', [
             'title' => 'Home'
         ]);
     }
