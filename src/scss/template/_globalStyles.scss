@@ -60,7 +60,7 @@ body {
 }
 
 .icon-button a i {
-  background-color: #f35525;
+  background-color: v.$primary;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -72,7 +72,7 @@ body {
 }
 
 .icon-button a:hover {
-  color: #f35525;
+  color: v.$primary;
 }
 
 .icon-button a:hover i {
@@ -93,7 +93,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #f35525;
+  background-color: v.$primary;
   color: v.$white;
 }
 
@@ -170,7 +170,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #f35525;
+  background: v.$primary;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -193,6 +193,6 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #f35525;
+  background: v.$primary;
   border-radius: 50%;
 }

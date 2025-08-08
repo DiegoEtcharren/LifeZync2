@@ -1,10 +1,9 @@
-<footer class="footer">
-    <a
-    href="https://wa.me/5218119651744"
-    class="whatsapp-contact"
-    target="_blank"
-    aria-label="Contactar por WhatsApp"
-    >
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-</footer>
+  <footer>
+    <div class="container">
+      <div class="col-lg-8">
+        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+
+          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+      </div>
+    </div>
+  </footer>

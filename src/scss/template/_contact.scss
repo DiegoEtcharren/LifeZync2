@@ -110,7 +110,7 @@
 }
 
 .contact-content #contact-form button:hover {
-  background-color: #f35525;
+  background-color: v.$primary;
 }
 
 /* 
@@ -213,5 +213,5 @@ Contact Page Style
 }
 
 .contact-page #contact-form button:hover {
-  background-color: #f35525;
+  background-color: v.$primary;
 }
