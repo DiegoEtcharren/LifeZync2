@@ -3222,13 +3222,21 @@
   margin-top: 30px;
 }
 
-.contact {
+.contact-hero {
   background-image: url(../img/contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 100px 0px 250px 0px;
-  position: relative;
+  display: flex;
+  height: 30rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.contact-subtitle {
+  text-transform: uppercase;
 }
 
 .contact .section-heading h2, .contact .section-heading .h2 {
@@ -3355,8 +3363,17 @@ Contact Page Style
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   padding: 35px 30px;
   background-color: #fff;
-  display: inline-block;
-  min-width: 360px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-icon {
+  font-size: 2.5rem;
+  color: #0071f8;
+  vertical-align: middle;
+  margin-right: 1rem;
 }
 
 .contact-page .phone {
@@ -13047,7 +13064,7 @@ body {
 }
 
 .section-heading h6, .section-heading .h6 {
-  color: #ee626b;
+  color: #0071f8;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 700;
