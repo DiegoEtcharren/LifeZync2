@@ -3,20 +3,20 @@
     <div class="owl-carousel owl-banner">
       <div class="item item-1">
         <div class="header-text">
-          <span class="category">Toronto, <em>Canada</em></span>
-          <h2>Hurry!<br>Get the Best Villa for you</h2>
+          <a href="/productos" class="btn btn-light banner-button">Iluminación</a>
+          <h2>"Luz inteligente, estilo y control."</h2>
         </div>
       </div>
       <div class="item item-2">
         <div class="header-text">
-          <span class="category">Melbourne, <em>Australia</em></span>
-          <h2>Be Quick!<br>Get the best villa in town</h2>
+          <a href="/productos" class="btn btn-light banner-button">Comfort</a>
+          <h2>"Comodidad en un solo toque."</h2>
         </div>
       </div>
       <div class="item item-3">
         <div class="header-text">
-          <span class="category">Miami, <em>South Florida</em></span>
-          <h2>Act Now!<br>Get the highest level penthouse</h2>
+          <a href="/productos" class="btn btn-light banner-button">Seguridad</a>
+          <h2>"Protección 24/7 para tu hogar."</h2>
         </div>
       </div>
     </div>

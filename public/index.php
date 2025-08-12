@@ -8,7 +8,7 @@ use Controllers\PaginasController;
 $router = new Router();
 
 // Area Publica:
-$router->get('/', [PaginasController::class, 'index']);
+$router->get('/home', [PaginasController::class, 'home']);
 $router->get('/proyectos', [PaginasController::class, 'proyectos']);
 $router->get('/productos', [PaginasController::class, 'productos']);
 $router->get('/contacto', [PaginasController::class, 'contact']);

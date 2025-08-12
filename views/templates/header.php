@@ -9,9 +9,8 @@
               </div>
               <div class="col-lg-4 col-md-4">
                   <ul class="social-links">
+                      <li><a href="#"><i class='bx bxl-whatsapp'></i></a></li>
                       <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                      <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                       <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                   </ul>
               </div>
@@ -32,10 +31,10 @@
                       <!-- ***** Logo End ***** -->
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li><a href="/" class="active">Home</a></li>
-                          <li><a href="/productos">Productos</a></li>
-                          <li><a href="/proyectos">Proyectos</a></li>
-                          <li><a href="/contacto">Contacto</a></li>
+                          <li><a href="/home" class="<?php echo current_page('/home') ? 'active' : '' ?>">Home</a></li>
+                          <li><a href="/productos" class="<?php echo current_page('/productos') ? 'active' : '' ?>">Productos</a></li>
+                          <li><a href="/proyectos" class="<?php echo current_page('/proyectos') ? 'active' : '' ?>">Proyectos</a></li>
+                          <li><a href="/contacto" class="<?php echo current_page('/contacto') ? 'active' : '' ?>">Contacto</a></li>
                           <li><a href="/contacto"><i class="fa fa-calendar"></i>Agenda una Visita</a></li>
                       </ul>
                       <a class='menu-trigger'>

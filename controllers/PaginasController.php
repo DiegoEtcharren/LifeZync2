@@ -7,7 +7,7 @@ use MVC\Router;
 class PaginasController
 {
 
-    public static function index(Router $router)
+    public static function home(Router $router)
     {
 
         $router->render('paginas/home', [

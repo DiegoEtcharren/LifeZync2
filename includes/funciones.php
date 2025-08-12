@@ -10,7 +10,7 @@ function s($html) : string {
     $s = htmlspecialchars($html);
     return $s;
 }
-function pagina_actual(string $path): bool {
+function current_page(string $path): bool {
     return str_contains($_SERVER['PATH_INFO'] ?? '/', $path) ? true : false;
 }
 
